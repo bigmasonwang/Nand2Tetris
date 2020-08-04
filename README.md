@@ -19,7 +19,7 @@ Nand2Tetris Graphs
 >  Outputs: out
 >  Function: If a=b=1 then out=1 else out=0.
 
-![And](images/And-6543358.png)
+![And](images/And.png)
 
 #### Or
 
