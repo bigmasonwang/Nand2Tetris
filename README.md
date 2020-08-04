@@ -103,9 +103,11 @@ else if sel=01 then {b=in, a=c=d=0} else if sel=10 then {c=in, a=b=d=0} else if 
 ```
 Chip name: HalfAdder
 Inputs: a, b
-Outputs: sum, carry Function:sum =LSBofa+b
+Outputs: sum, carry Function:sum =LSB of a+b
            carry = MSB of a + b
 ```
+
+![HalfAdder](images/HalfAdder.png)
 
 #### FullAdder
 
@@ -115,8 +117,11 @@ Inputs:
 Outputs:
 Function:
 a, b, c
-sum, carry sum=LSBofa+b+c carry = MSB of a + b + c
+sum, carry sum=LSB of a+b+c 
+		carry = MSB of a + b + c
 ```
+
+ ![FullAdder](images/FullAdder.png)
 
 #### Add16
 
@@ -128,4 +133,23 @@ Function: out = a + b
 Comment: Integer 2's complement addition.
 Overflow is neither detected nor handled.
 ```
+
+![Add16](images/Add16.png)
+
+#### Inc16
+
+```
+Chip name: Inc16
+Inputs: in[16]
+Outputs: out[16]
+Function: out=in+1
+Comment: Integer 2’s complement addition.
+Overflow is neither detected nor handled.
+```
+
+![Inc16](images/Inc16.png)
+
+### ALU
+
+![ALU](images/ALU.png)
 
