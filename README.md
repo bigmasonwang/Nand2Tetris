@@ -113,12 +113,10 @@ Outputs: sum, carry Function:sum =LSB of a+b
 
 ```
 Chip name: FullAdder
-Inputs:
-Outputs:
-Function:
-a, b, c
-sum, carry sum=LSB of a+b+c 
-		carry = MSB of a + b + c
+Inputs:    a, b, c
+Outputs:   sum, carry
+Function:  sum=LSB of a+b+c 
+		       carry = MSB of a + b + c
 ```
 
  ![FullAdder](images/FullAdder.png)
@@ -153,3 +151,18 @@ Overflow is neither detected nor handled.
 
 ![ALU](images/ALU.png)
 
+#### PC
+
+```
+Chip name: PC // 16-bit counter
+Inputs:    in[16], inc, load, reset 
+Outputs:   out[16]
+Function:  If reset(t-1) then out(t)=0
+					 else if load(t-1) then out(t)=in(t-1)
+           else if inc(t-1) then out(t)=out(t-1)+1
+           else out(t)=out(t-1)
+Comment:   "=" is 16-bit assignment.
+           "+" is 16-bit arithmetic addition.
+```
+
+![PC](images/PC.png)
